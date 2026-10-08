@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Doc</title>
+</head>
+
+<body>
+
+    <h2 id="Header">This is a test.</h2>
+    <button onclick="changeHeader()">Change header</button>
+    <p id="demo">Boop</p>
+
+    <div id="output">What is your name?</div>
+    <input type="text" id="inputfield" placeholder="Name">
+    <button onclick="updateText()">Enter</button>
+    
+    <script>
+        function updateText() {
+            const newText = document.getElementById('inputfield').value ;
+            let result = "<h1> Your name is " + newText + "</h1>";
+            document.getElementById("output").innerHTML = result;
+        }
+    </script>
+
+    <script>
+        function changeHeader() {
+let myheader = document.getElementById("Header")
+
+            myheader.innerHTML = "New Header"; //Using let allows for shorthands
+            document.getElementById("Header").style.color = "green"; //The long way
+        }
+    </script>
+
+    <script>
+        /*
+        I'm not having a good day today
+        But this class makes it better.
+        */
+
+        /*
+        let animal = prompt("What's your favorite animal?");
+        console.log("You love " + animal);
+        alert("You love " + animal + " right?");
+        */
+
+        let division = 14 / 5;
+        let result = 14 % 5; // % Gives remainder
+        console.log("14/5 =" + division);
+        console.log("Remainder =" + result);
+        let a = 5; //a = a+20
+        a += 40;
+        let b = 10;
+        let sum;
+        sum = a + b;
+        console.log("sum =" + sum);
+    </script>
+
+    <!--Script must be either external, inline, or in the body after the paragraph stuff so page loads first.-->
+    <script>
+        console.log("Hello, testing!");
+        console.log("Woo Javascript!");
+        document.getElementById("demo").innerHTML = "Placeholder";
+    </script>
+
+</body>
+
+</html>
